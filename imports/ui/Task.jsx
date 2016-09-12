@@ -37,7 +37,7 @@ export default class Task extends Component {
 			</li>
 		);
 	}
-}
+};
 
 Task.propTypes = {
 	// This component gets the task to display through a React prop.
