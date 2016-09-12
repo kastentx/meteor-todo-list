@@ -17,6 +17,16 @@ class App extends Component {
 			<div className="container">
 				<header>
 					<h1>To-Do List</h1>
+
+					<form className="new-task" onSubmit={this.handleSubmit.bind(this)}>
+						<input
+							type="text"
+							ref="textInput"
+							placeholder="Type to add new tasks"
+						/>
+					</form>
+
+
 				</header>
 				
 				<ul>
