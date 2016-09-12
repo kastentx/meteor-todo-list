@@ -30,14 +30,14 @@ export default class Task extends Component {
 					type="checkbox"
 					readOnly
 					checked={this.props.task.checked}
-					onClick={this.props.toggleChecked.bind(this)}
+					onClick={this.toggleChecked.bind(this)}
 				/>
 
 				<span className="text">{this.props.task.text}</span>
 			</li>
 		);
 	}
-};
+}
 
 Task.propTypes = {
 	// This component gets the task to display through a React prop.
