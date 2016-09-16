@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 
+import { Tasks } from '../api/tasks.js';
+
 // Task component - represents a single to-do item
 export default class Task extends Component {
 	toggleChecked() {
 		// Set the checked property to the opposite of its current value
-		Meteor.call('tasks.setChecked', this.props.task_id, !this.props.task.setChecked);
+		Meteor.call('tasks.setChecked', this.props.task._id, !this.props.task.checked);
 	}
 
 	deleteThisTask() {
-		Meteor.call('tasks.remove', this.props.task_id);
+		Meteor.call('tasks.remove', this.props.task._id);
 	}
 
 	render() {
